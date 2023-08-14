@@ -1,0 +1,11 @@
+---
+applications:
+- name: llm-chatbot
+  random-route: true
+  domain: cfapps.ap21.hana.ondemand.com
+  path: ./
+  memory: 128M
+  buildpack: python_buildpack
+  command: python server.py
+services:
+ - openai_service
